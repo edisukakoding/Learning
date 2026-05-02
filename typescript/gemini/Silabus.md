@@ -1,15 +1,16 @@
 # Silabus: TypeScript Mastering for JavaScript Developers
 
-Silabus ini dirancang khusus untuk mempercepat transisi dari JavaScript ke TypeScript dengan fokus pada keamanan kode, skalabilitas, dan produktivitas.
+Silabus ini dirancang untuk mempercepat transisi dari JavaScript ke TypeScript menggunakan standar **TypeScript 5.x+**.
 
 ## Bagian 1: Transisi & Fondasi (JavaScript ke TypeScript)
 
-- **Modul 1: Mengapa TypeScript?**
-  - Masalah klasik JS: "undefined is not a function" dan Runtime Errors.
-  - Cara kerja Kompiler TS (Transpilation).
-  - Setup Environment: Node.js, TypeScript Compiler (tsc), dan `tsconfig.json`.
+- **Modul 1: Mengapa TypeScript & Setup**
+  - Masalah klasik JS vs Solusi TypeScript.
+  - Cara kerja Kompiler TS & Transpilation.
+  - Setup Environment Modern: Node.js, TypeScript 5.x, `tsconfig.json`, dan `tsx` runner.
 
 - **Modul 2: Basic Type Annotations & Inference**
+
   - Tipe data primitif: `string`, `number`, `boolean`, `null`, `undefined`.
   - Type Inference: Kapan harus menulis tipe dan kapan membiarkan TS menebak.
   - Tipe khusus: `any` (dan mengapa harus dihindari), `unknown`, dan `void`.
