@@ -1,54 +1,109 @@
-# Silabus Lengkap: Mastering Svelte & SvelteKit
+# Silabus Mastering Svelte 5 & SvelteKit: Professional Developer Path
 
-## Bagian 1: Fondasi & Core Svelte
+## Bagian 1: Fondasi & Modern Reactivity (Svelte 5)
 
-- **Modul 1: Pengenalan & Arsitektur:** Memahami filosofi Svelte (kompilasi vs Virtual DOM) dan pengaturan lingkungan kerja.
-- **Modul 2: Struktur Komponen:** Anatomi file `.svelte` (Script, HTML, Style) dan penulisan CSS yang terisolasi secara otomatis.
-- **Modul 3: Reaktivitas Dasar:** Deklarasi variabel reaktif, penggunaan sintaks `$:` (Reactive Declarations), dan pembaruan array/objek.
-- **Modul 4: Templating & Logic Blocks:** Alur kontrol menggunakan `{#if}`, `{#each}`, dan penanganan data asinkron dengan `{#await}`.
-- **Modul 5: Event Handling:** Mendengarkan event DOM, penggunaan event modifiers (`once`, `preventDefault`), dan pengiriman custom event ke komponen induk.
-- **Modul 6: Bindings:** Sinkronisasi data dua arah pada input form, checkbox, hingga binding elemen DOM menggunakan `bind:this`.
+- **Modul 1: Svelte Philosophy & Setup**
+  - Mengapa Svelte? (No Virtual DOM, Compile-time optimization).
+  - Setup Environment: Vite, SvelteKit, dan TypeScript integration.
+  - Struktur Proyek & Konvensi SvelteKit.
 
-## Bagian 2: Advanced Logic & UI
+- **Modul 2: The New Reactivity (Runes)**
+  - Pendalaman `$state`, `$derived`, dan `$effect`.
+  - Migrasi dari Svelte 4 (`let`, `$:`) ke Svelte 5.
+  - Fine-grained reactivity: Bagaimana Svelte mengupdate DOM secara presisi.
 
-- **Modul 7: Lifecycle Hooks:** Menguasai siklus hidup komponen dengan onMount, beforeUpdate, afterUpdate, dan onDestroy.
-- **Modul 8: Svelte Actions:** Menggunakan direktif use:action untuk memanipulasi DOM secara langsung dan integrasi library eksternal.
-- **Modul 9: Komposisi Komponen:** Penggunaan `<slot />`, Named Slots, dan komunikasi data melalui Context API.
-- **Modul 10: Animasi & Motion:** Implementasi transisi bawaan (fade, fly, slide) dan penggunaan spring/tweened untuk pergerakan nilai yang halus.
+- **Modul 3: Templating & Snippets**
+  - Logic blocks modern: `{#if}`, `{#each}`, `{#await}`.
+  - Penggunaan `{#snippet}` dan `{@render}` untuk komposisi UI yang lebih fleksibel dibanding Slots.
+  - Event Handling & Event Modifiers di Svelte 5.
 
-## Bagian 11: State Management & Arsitektur Data
+- **Modul 4: Bindings & Form Handling**
+  - Two-way data binding pada berbagai elemen input.
+  - Advanced bindings: Group bindings, contenteditable, dan `bind:this`.
+  - Integrasi dengan library validasi (Zod/Superforms).
 
-- **Modul 11: Svelte Stores:** Pengelolaan state global dengan Writable, Readable, dan Derived Stores.
-- **Modul 12: Optimalisasi Store:** Teknik custom stores, manajemen langganan (subscriptions), dan sinkronisasi store ke localStorage.
+## Bagian 2: Advanced Svelte & Component Patterns
 
-## Bagian 4: SvelteKit & Production Ready
+- **Modul 5: Component Communication & Context**
+  - Props (Modern approach dengan `$props()`).
+  - Context API (`getContext`, `setContext`) untuk deep-nesting state.
+  - Component Composition: Snippets vs Higher-Order Components.
 
-- **Modul 13: Routing & Rendering:** Sistem file-based routing, Server-Side Rendering (SSR), dan Static Site Generation (SSG).
-- **Modul 14: Data Loading:** Mengambil data server melalui fungsi load, penanganan form actions, dan proteksi rute (Auth).
-- **Modul 15: Quality Assurance:** Unit Testing menggunakan Vitest dan End-to-End (E2E) Testing menggunakan Playwright.
-- **Modul 16: Optimalisasi & Deployment:** Code splitting, pengelolaan memori, Dockerization, dan strategi deployment ke server produksi.
+- **Modul 6: Svelte Actions & Lifecycle**
+  - Kekuatan `use:action` untuk integrasi library vanilla JS (Chart.js, Tippy, dll).
+  - Lifecycle modern: Mengganti `onMount` dengan `$effect` di Svelte 5.
+  - Integrasi DOM manual dan cleanup logic.
 
-## Studi Kasus: SaaS Inventory & Project HUB
+- **Modul 7: Motion, Transitions, & Animations**
+  - Bawaan: `fade`, `fly`, `slide`, `scale`.
+  - Custom transitions & Deferred transitions (Crossfade).
+  - Motion: `tweened` dan `spring` untuk interaksi UI yang fluid.
 
-Studi kasus ini dirancang untuk menunjukkan seluruh fitur unggulan Svelte dalam satu aplikasi fungsional yang kompleks.
+- **Modul 8: State Management Beyond Components**
+  - Reactive classes dan modul state.
+  - Penggunaan Svelte Stores (Writable, Readable, Derived) untuk legacy compatibility.
+  - Best practices: Kapan menggunakan Runes vs Stores.
 
-- Arsitektur Multi-Tenant & Dashboard Reaktif
-  - Fitur: Dashboard yang menampilkan ringkasan data real-time.
-  - Penerapan: Menggunakan Reactive Declarations untuk kalkulasi otomatis dan Derived Stores untuk memfilter data berdasarkan tenant yang aktif.
+## Bagian 3: SvelteKit Deep Dive (Fullstack Svelte)
 
-- Management Board dengan Mikro-Interaksi
-  - Fitur: Sistem tarik-lepas (drag-and-drop) untuk pengaturan tugas atau stok barang.
-  - Penerapan: Menggunakan Svelte Actions (use:drag) untuk interaksi DOM dan Crossfade Transitions agar elemen berpindah dengan animasi yang organik.
+- **Modul 9: Routing & Advanced Layouts**
+  - File-based routing (Static, Dynamic, Optional parameters).
+  - Layout inheritance dan grouping `(group)`.
+  - Error handling dengan `+error.svelte` dan `expected/unexpected errors`.
 
-- Form Dinamis & Validasi Instan
-  - Fitur: Input data barang yang kompleks dengan preview langsung.
-  - Penerapan: Memanfaatkan Two-way Bindings untuk sinkronisasi data tanpa boilerplate dan Sveltekit Actions untuk pengiriman data ke server.
+- **Modul 10: Server-Side Logic (Load & Actions)**
+  - Data loading (`+page.server.js` vs `+page.js`).
+  - Form Actions: Menangani submit form tanpa JS (Progressive Enhancement).
+  - API Routes (Server Endpoints) untuk integrasi pihak ketiga.
 
-- Sistem Notifikasi Global & Offline Mode
-  - Fitur: Pop-up notifikasi yang muncul di seluruh aplikasi dan kemampuan akses tanpa internet.
-  - Penerapan: Menggunakan Custom Stores untuk manajemen antrean notifikasi dan integrasi Service Workers untuk kapabilitas Offline-First.
+- **Modul 11: Middlewares & Security**
+  - Menggunakan `hooks.server.js` untuk intercept request.
+  - Keamanan: CSRF protection, Content Security Policy (CSP).
+  - Environment Variables (Private vs Public).
 
-- Automated Testing Suite
-  - Fitur: Pengetesan otomatis pada alur kritis (seperti proses input barang dan login).
-  - Penerapan: Menulis skrip E2E dengan Playwright untuk memastikan seluruh fitur berjalan sempurna sebelum dideploy ke lingkungan produksi.
-  
+## Bagian 4: Authentication & Authorization (Deep Dive JWT)
+
+- **Modul 12: Konsep Auth di SvelteKit**
+  - Arsitektur Stateless vs Stateful (Session vs JWT).
+  - Strategi penyimpanan token: LocalStorage vs HttpOnly Cookies.
+
+- **Modul 13: Implementasi JWT Authentication**
+  - Flow Register & Login.
+  - Implementasi Refresh Token & Access Token.
+  - Middleware: Proteksi rute dan validasi token di `hooks.server.js`.
+  - Sinkronisasi state auth ke `event.locals` dan `$page.data`.
+
+## Studi Kasus Utama: "ProTasker - Enterprise Task Management"
+
+Aplikasi manajemen tugas tim yang mencakup seluruh materi dari awal hingga akhir, dengan fokus pada performa dan keamanan.
+
+### 1. Sistem Autentikasi Berbasis JWT (Core Feature)
+
+- **Fitur:** Register, Login, Logout, dan "Remember Me".
+- **Teknis:**
+  - Login menggunakan **SvelteKit Form Actions**.
+  - Token JWT disimpan di **HttpOnly Cookies** untuk mencegah XSS.
+  - Middleware di `hooks.server.js` untuk mengecek validitas token sebelum merender halaman terproteksi.
+  - Halaman login dengan validasi sisi klien dan server menggunakan **Zod**.
+
+### 2. Dashboard Reaktif & Statistik
+
+- **Fitur:** Grafik progres tugas dan ringkasan aktivitas.
+- **Teknis:** Menggunakan **Runes (`$derived`)** untuk menghitung statistik secara real-time dari store data, dan integrasi library chart melalui **Svelte Actions**.
+
+### 3. Kanban Board dengan Drag-and-Drop
+
+- **Fitur:** Pemindahan status tugas secara visual.
+- **Teknis:** Implementasi drag-and-drop menggunakan **Svelte Actions** dan **Crossfade Transitions** agar perpindahan kartu antar kolom terlihat mulus secara visual.
+
+### 4. Real-time Project Hub
+
+- **Fitur:** Update tugas secara instan dan sistem notifikasi.
+- **Teknis:**
+  - Penggunaan **Optimistic UI** (update UI sebelum server merespon) menggunakan SvelteKit `use:enhance`.
+  - Sistem notifikasi toast menggunakan **Global State Management**.
+
+### 5. Deployment & Production Ready
+
+- **Fitur:** Aplikasi siap pakai di lingkungan cloud.
+- **Teknis:** Optimasi build, Dockerization, dan integrasi CI/CD (GitHub Actions).
